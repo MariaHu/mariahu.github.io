@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="styles_light.css" id="styles">
+  <link rel="stylesheet" href="../styles/styles_light.css" id="styles">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 </head>
@@ -15,7 +15,7 @@
     <li><a href="Researcher.html">Researcher</a></li>
     <li><a href="Programmer.html">Programmer</a></li>
   
-    <li id="nav-icon"><button id="btn1"><img src="./images/black/half-moon.png" alt="moon" title="dark mode" id="toggleImg"/></button></li>
+    <li id="nav-icon"><button id="btn1"><img src="../styles/images/black/half-moon.png" alt="moon" title="dark mode" id="toggleImg"/></button></li>
 </ul>
  </nav>
 
@@ -25,7 +25,7 @@
   
     <div class="content-container blank container-photo">
       
-     <img id="photoID" src="./images/Photo.png" />
+     <img id="photoID" src="../styles/images/Photo.png" />
       
    </div>
   
@@ -42,9 +42,9 @@
   <div id="findMe" class="contact-container">
     <h3>If you find me on these sites, it is indeed me!</h3>
     <div class="grid-links-container">
-        <span id="academia"><img id="academia-img" src="./images/black/academia.png" title="academia.org"/></span>
-        <span id="linkedin"><img id="linkedin-img" src="./linkedin.png" title="linkedin.com"/></span>
-        <span id="github"><img id="github-img"src="./images/black/github-mark.png" title="github.org"/></span>
+        <span id="academia"><img id="academia-img" src="../styles/images/black/academia.png" title="academia.org"/></span>
+        <span id="linkedin"><img id="linkedin-img" title="linkedin.com"/></span>
+        <span id="github"><img id="github-img"src="../styles/images/black/github-mark.png" title="github.org"/></span>
        
         
     </div>
@@ -61,31 +61,31 @@
 
    /* Start values: get the value stored inside localStorage, and adjust the mode in consequence */
     let styleStore = window.localStorage.getItem('style');
-    var moon_active = "./images/black/half-moon.png";
-    var sun_active = "./images/white/sun.png";
+    var moon_active = "../styles/images/black/half-moon.png";
+    var sun_active = "../styles/images/white/sun.png";
 
 
       if(styleStore==="light"){
-       $("#styles").attr("href", 'styles_light.css' );
+       $("#styles").attr("href", '../styles/styles_light.css' );
          window.localStorage.setItem('style', "light");
          styleStore = window.localStorage.getItem('style');
          $('#toggleImg').attr('src', moon_active);
          $('#toggleImg').attr("title", "light mode");
-         $("img#academia-img").attr("src", "./images/black/academia.png");
-         $("img#github-img").attr("src", "./images/black/github-mark.png");
-         $("img#linkedin-img").attr("src", "./images/white/LinkedIn_icon.svg.png");
+         $("img#academia-img").attr("src", "../styles/images/black/academia.png");
+         $("img#github-img").attr("src", "../styles/images/black/github-mark.png");
+         $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
         }
       
        else {
-        $("#styles").attr("href", 'styles_dark.css' );
+        $("#styles").attr("href", '../styles/styles_dark.css' );
          window.localStorage.setItem('style', "dark");
          styleStore = window.localStorage.getItem('style');
          $('#toggleImg').attr("src", sun_active);
          $('#toggleImg').attr("title", "dark mode");
 
-         $("img#academia-img").attr("src", "./images/white/academia.png");
-         $("img#github-img").attr("src", "./images/white/github-mark-white.png");
-         $("img#linkedin-img").attr("src", "./images/white/LinkedIn_icon.svg.png");
+         $("img#academia-img").attr("src", "../styles/images/white/academia.png");
+         $("img#github-img").attr("src", "../styles/images/white/github-mark-white.png");
+         $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
       }
 
     $("#btn1").click( function() {
@@ -103,19 +103,19 @@
           */
       
         if(styleStore === "light"){
-         $("#styles").attr("href", 'styles_dark.css');
+         $("#styles").attr("href", '../styles/styles/styles_dark.css');
          window.localStorage.setItem('style', "dark");
          styleStore = window.localStorage.getItem('style');
          $('#toggleImg').attr("src", sun_active);
          $('#toggleImg').attr("title", "dark mode");
        
-         $("img#academia-img").attr("src", "./images/white/academia.png");
-         $("img#github-img").attr("src", "./images/white/github-mark-white.png");
-         $("img#linkedin-img").attr("src", "./images/white/LinkedIn_icon.svg.png");
+         $("img#academia-img").attr("src", "../styles/images/white/academia.png");
+         $("img#github-img").attr("src", "../styles/images/white/github-mark-white.png");
+         $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
     
         }
         else{
-          $("#styles").attr("href", 'styles_light.css' );
+          $("#styles").attr("href", '../styles/styles_light.css' );
          window.localStorage.setItem('style', "light");
          styleStore = window.localStorage.getItem('style');
         
@@ -123,9 +123,9 @@
          $('#toggleImg').attr("title", "light mode");
    
 
-         $("img#academia-img").attr("src", "./images/black/academia.png");
-         $("img#github-img").attr("src", "./images/black/github-mark.png");
-         $("img#linkedin-img").attr("src", "./images/white/LinkedIn_icon.svg.png");
+         $("img#academia-img").attr("src", "../styles/images/black/academia.png");
+         $("img#github-img").attr("src", "../styles/images/black/github-mark.png");
+         $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
          
         };
       

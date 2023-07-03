@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="all">
     <head>
-        <link rel="stylesheet" href="styles_light.css" id="styles">
+        <link rel="stylesheet" href="../styles/styles_light.css" id="styles">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
      
       </head>
@@ -15,7 +15,7 @@
     <li><a href="Researcher.html">Researcher</a></li>
     <li><a href="Programmer.html">Programmer</a></li>
  
-    <li id="nav-icon"><button id="btn1"><img src="./images/black/half-moon.png" alt="moon" title="dark mode" id="toggleImg"/></button></li>
+    <li id="nav-icon"><button id="btn1"><img src="../styles/images/black/half-moon.png" alt="moon" title="dark mode" id="toggleImg"/></button></li>
                        
      
 </ul>
@@ -41,18 +41,18 @@
      <div>
       <h3>What I do</h3>
       <ul class="ul-specialities-container">
-        <li><img id="WA-img" src="./images/black/writing_article_icon.png"/>Scientific Writing</li>
-        <li><img id="TE-img" src="./images/black/teaching.png"/>Presentations</li>
-        <li><img id="AN-img" src="./images/black/analysis_icon.png"/>Analysis</li>
-        <li><img id="SL-img" src="./images/black/selflearning.png"/>Self-Learning</li>
-        <li><img id="Pro-img" src="./images/black/programming.png"/>Programming</li>
+        <li><img id="WA-img" src="../styles/images/black/writing_article_icon.png"/>Scientific Writing</li>
+        <li><img id="TE-img" src="../styles/images/black/teaching.png"/>Presentations</li>
+        <li><img id="AN-img" src="../styles/images/black/analysis_icon.png"/>Analysis</li>
+        <li><img id="SL-img" src="../styles/images/black/selflearning.png"/>Self-Learning</li>
+        <li><img id="Pro-img" src="../styles/images/black/programming.png"/>Programming</li>
       </ol>
      </div>
    </div>
  
    <div class="content-container" id="factsAboutMe">
       <h3>Some Facts about me</h3>
-    <h4>I have...</h4>
+    <h4>I have..</h4>
      <ul class="ol-facts-container">
       <li><span class="ul-facts-numbers">10</span> <span class="ul-facts-what">Articles</span></li>
       <li><span class="ul-facts-numbers">30</span> <span class="ul-facts-what"> Presentations</span></li>
@@ -75,16 +75,16 @@
   <div id="findMe" class="contact-container">
     <h3>If you find me on these sites, it is indeed me!</h3>
     <div class="grid-links-container">
-        <span id="academia"><img id="academia-img" src="./images/black/academia.png" title="academia.org"/></span>
-        <span id="linkedin"><img id="linkedin-img" src="./linkedin.png" title="linkedin.com"/></span>
-        <span id="github"><img id="github-img"src="./images/black/github-mark.png" title="github.org"/></span>
+        <span id="academia"><img id="academia-img" src="../styles/images/black/academia.png" title="academia.org"/></span>
+        <span id="linkedin"><img id="linkedin-img" src="../styles/linkedin.png" title="linkedin.com"/></span>
+        <span id="github"><img id="github-img"src="../styles/images/black/github-mark.png" title="github.org"/></span>
        
         
     </div>
   </div>
   <div id="contactMe" class ="contact-container">
     <h3>Otherwise, you can contact me per Email</h3>
-    <iframe id="gmail-img" src="./images/white/Gmail_icon.svg" title="Gmail" height="60" width="60"></iframe>
+    <iframe id="gmail-img" src="../styles/images/white/Gmail_icon.svg" title="Gmail" height="60" width="60"></iframe>
   </div>
 </section>
 </main>
@@ -97,41 +97,41 @@
 
    /* Start values: get the value stored inside localStorage, and adjust the mode in consequence */
     let styleStore = window.localStorage.getItem('style');
-    var moon_active = "./images/black/half-moon.png";
-    var sun_active = "./images/white/sun.png";
+    var moon_active = "../styles/images/black/half-moon.png";
+    var sun_active = "../styles/images/white/sun.png";
  /* TODO: change icon for academia 
  change gmail icon for a simple letter icon, because I will use my professionnal address ! */
 
       if(styleStore==="light"){
-       $("#styles").attr("href", 'styles_light.css' );
+       $("#styles").attr("href", '../styles/styles_light.css' );
          window.localStorage.setItem('style', "light");
          styleStore = window.localStorage.getItem('style');
          $('#toggleImg').attr('src', moon_active);
          $('#toggleImg').attr("title", "light mode");
-         $("img#TE-img").attr("src", "./images/black/teaching.png");
-         $("img#AN-img").attr("src", "./images/black/analysis_icon.png");
-         $("img#SL-img").attr("src", "./images/black/selflearning.png");
-         $("img#Pro-img").attr("src", "./images/black/programming.png");
-         $("img#academia-img").attr("src", "./images/black/academia.png");
-         $("img#github-img").attr("src", "./images/black/github-mark.png");
-         $("img#linkedin-img").attr("src", "./images/white/LinkedIn_icon.svg.png");
+         $("img#TE-img").attr("src", "../styles/images/black/teaching.png");
+         $("img#AN-img").attr("src", "../styles/images/black/analysis_icon.png");
+         $("img#SL-img").attr("src", "../styles/images/black/selflearning.png");
+         $("img#Pro-img").attr("src", "../styles/images/black/programming.png");
+         $("img#academia-img").attr("src", "../styles/images/black/academia.png");
+         $("img#github-img").attr("src", "../styles/images/black/github-mark.png");
+         $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
         }
       
        else {
-        $("#styles").attr("href", 'styles_dark.css' );
+        $("#styles").attr("href", '../styles/styles_dark.css' );
          window.localStorage.setItem('style', "dark");
          styleStore = window.localStorage.getItem('style');
          $('#toggleImg').attr("src", sun_active);
          $('#toggleImg').attr("title", "dark mode");
 
-         $("img#WA-img").attr("src", "./images/white/writing.png");
-         $("img#TE-img").attr("src", "./images/white/presentation.png");
-         $("img#AN-img").attr("src", "./images/white/analysis.png");
-         $("img#SL-img").attr("src", "./images/white/selflearning.png");
-         $("img#Pro-img").attr("src", "./images/white/programming.png");
-         $("img#academia-img").attr("src", "./images/white/academia.png");
-         $("img#github-img").attr("src", "./images/white/github-mark-white.png");
-         $("img#linkedin-img").attr("src", "./images/white/LinkedIn_icon.svg.png");
+         $("img#WA-img").attr("src", "../styles/images/white/writing.png");
+         $("img#TE-img").attr("src", "../styles/images/white/presentation.png");
+         $("img#AN-img").attr("src", "../styles/images/white/analysis.png");
+         $("img#SL-img").attr("src", "../styles/images/white/selflearning.png");
+         $("img#Pro-img").attr("src", "../styles/images/white/programming.png");
+         $("img#academia-img").attr("src", "../styles/images/white/academia.png");
+         $("img#github-img").attr("src", "../styles/images/white/github-mark-white.png");
+         $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
       }
 
     $("#btn1").click( function() {
@@ -149,23 +149,23 @@
           */
       
         if(styleStore === "light"){
-         $("#styles").attr("href", 'styles_dark.css');
+         $("#styles").attr("href", '../styles/styles_dark.css');
          window.localStorage.setItem('style', "dark");
          styleStore = window.localStorage.getItem('style');
          $('#toggleImg').attr("src", sun_active);
          $('#toggleImg').attr("title", "dark mode");
-         $("img#WA-img").attr("src", "./images/white/writing.png");
-         $("img#TE-img").attr("src", "./images/white/presentation.png");
-         $("img#AN-img").attr("src", "./images/white/analysis.png");
-         $("img#SL-img").attr("src", "./images/white/selflearning.png");
-         $("img#Pro-img").attr("src", "./images/white/programming.png");
-         $("img#academia-img").attr("src", "./images/white/academia.png");
-         $("img#github-img").attr("src", "./images/white/github-mark-white.png");
-         $("img#linkedin-img").attr("src", "./images/white/LinkedIn_icon.svg.png");
+         $("img#WA-img").attr("src", "../styles/images/white/writing.png");
+         $("img#TE-img").attr("src", "../styles/images/white/presentation.png");
+         $("img#AN-img").attr("src", "../styles/images/white/analysis.png");
+         $("img#SL-img").attr("src", "../styles/images/white/selflearning.png");
+         $("img#Pro-img").attr("src", "../styles/images/white/programming.png");
+         $("img#academia-img").attr("src", "../styles/images/white/academia.png");
+         $("img#github-img").attr("src", "../styles/images/white/github-mark-white.png");
+         $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
     
         }
         else{
-          $("#styles").attr("href", 'styles_light.css' );
+          $("#styles").attr("href", '../styles/styles_light.css' );
          window.localStorage.setItem('style', "light");
          styleStore = window.localStorage.getItem('style');
         
@@ -173,14 +173,14 @@
          $('#toggleImg').attr("title", "light mode");
    
 
-         $("img#WA-img").attr("src", "./images/black/writing_article_icon.png");
-         $("img#TE-img").attr("src", "./images/black/teaching.png");
-         $("img#AN-img").attr("src", "./images/black/analysis_icon.png");
-         $("img#SL-img").attr("src", "./images/black/selflearning.png");
-         $("img#Pro-img").attr("src", "./images/black/programming.png");
-         $("img#academia-img").attr("src", "./images/black/academia.png");
-         $("img#github-img").attr("src", "./images/black/github-mark.png");
-         $("img#linkedin-img").attr("src", "./images/white/LinkedIn_icon.svg.png");
+         $("img#WA-img").attr("src", "../styles/images/black/writing_article_icon.png");
+         $("img#TE-img").attr("src", "../styles/images/black/teaching.png");
+         $("img#AN-img").attr("src", "../styles/images/black/analysis_icon.png");
+         $("img#SL-img").attr("src", "../styles/images/black/selflearning.png");
+         $("img#Pro-img").attr("src", "../styles/images/black/programming.png");
+         $("img#academia-img").attr("src", "../styles/images/black/academia.png");
+         $("img#github-img").attr("src", "../styles/images/black/github-mark.png");
+         $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
          
         };
       
