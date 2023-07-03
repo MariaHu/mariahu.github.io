@@ -1,0 +1,444 @@
+
+/*General */
+
+* {
+   text-align:center;
+   background-color: white;
+  
+  
+}
+
+
+a {
+   
+   text-decoration: none;
+   color:black;
+   
+}
+
+a:hover{
+  
+ /* transform: scale(1.05); */
+ color:grey;
+}
+
+
+ nav > ul > li:hover:not(#nav-icon) {
+   
+   color:grey;
+   border-width:thin;
+   border-radius:25px;
+  
+   
+   border-style: solid;
+   
+
+
+ 
+}
+
+.theme-switch-wrapper {  
+   display: flex;  
+   float: right;  
+   align-items: center;  
+   position: absolute;  
+   top: 0px;  right: 10px;  
+ }.theme-switch {  
+   display: inline-block;  
+   height: 34px;  
+   position: relative;  
+   width: 60px;
+ }
+  
+ .theme-switch input {  
+   display: none;
+ } .slider {  
+   background-color: #ccc;  
+   bottom: 0;  
+   cursor: pointer;  
+   left: 0;  
+   position: absolute;  
+   right: 0;  
+   top: 0;  
+   transition: .4s;
+ } .slider:before {  
+   background-color: #fff;  
+   bottom: 4px;  
+   content: "";  
+   height: 26px;  
+   left: 4px;  
+   position: absolute;  
+   transition: .4s;  
+   width: 26px;
+ } input:checked + .slider {  
+   background-color: #28acea;
+ } input:checked + .slider:before {  
+   transform: translateX(26px);
+ }.slider.round {  
+   border-radius: 34px;
+ } .slider.round:before {  
+   border-radius: 50%;
+ }
+
+section:not(.findMe-container){
+   border-radius: 25px;
+   border-color: black;
+   border-width:thin;
+   border-style: solid;
+   margin-bottom: 2rem;
+   padding:0.5rem;
+   margin-top: 10rem;
+}
+
+/*nav bar */
+nav {
+  
+  position:fixed;
+  width:100%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  font-size: 2em;
+  padding: 0;
+  margin-top:-11rem; /* Sans cela, ma nav-bar accompagne la section ! */
+  
+}
+
+nav >ul {
+   display:grid;
+   
+   grid-template-columns: repeat(6, 1fr);
+   box-sizing:content-box;
+   
+}
+
+ nav > ul> li {
+   display:inline-block;
+   padding:1rem;
+   justify-content: center;
+   padding-left: 1rem;
+   padding-right:1rem;
+  
+   
+}
+
+#nav-icon {
+  
+   width:5.0%;  
+   position: absolute;
+   right:1rem;
+   top: 1rem;
+  
+}
+
+#nav-icon > button {
+   box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+   border-radius: 25px;
+  
+}
+
+#nav-icon > button > img {
+   max-width:80%;
+   max-height: 80%;
+   
+}
+
+
+/* Title*/
+
+h1 {
+   margin-top:5rem;
+}
+
+/*main */ 
+
+.main-container {
+   margin-bottom:-4rem;
+}
+
+.main {
+   width: 100%;
+   margin-top: 5rem;
+   display:grid;
+   grid-template-columns: repeat(2, 1fr);
+   
+   
+}
+
+.content-container:not(.blank), .pr-content-container {
+   border-radius: 25px;
+   /*box-shadow: 0 4px 8px 0 black; */
+   border-width: thin;
+   border-color: black;
+   border-style: solid;
+
+   height: 35rem;
+   margin-bottom: 2rem;
+   margin-left:2rem;
+   margin-right:2rem;
+   padding:1.5rem;
+   
+}
+
+
+
+.ol-content-container, .pr-ol-content-container  {
+   display:grid;
+   grid-template: 1, 1fr;
+   justify-items: center;
+
+}
+
+.ol-content-container  > li {
+   display:block;
+   padding:0.3rem;
+   justify-content: center;
+  
+}
+
+.ul-specialities-container {
+   display:grid;
+   grid-template-columns: repeat(3, 1fr);
+   
+}
+
+.ul-specialities-container >li  {
+   width: 45%;
+   padding: 1.5rem;
+   list-style-type: none;
+}
+.ul-specialities-container >li> img {
+   height:60%;
+   width:60%;
+   
+}
+
+/* FindMe Section*/
+
+.findMe-container{
+   display:grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-links-container {
+   height: 8rem;
+   margin-top: 4rem;
+}
+
+
+.grid-links-container >span {
+   width: 20%;
+   padding: 2rem;
+}
+.grid-links-container  > span >img {
+   height:45%;
+   width:7%;
+
+}
+
+
+.ol-facts-container {
+display:grid;
+grid-template-rows: repeat(4, 1fr);
+
+}
+
+.ol-facts-container> li {
+   display:grid;
+   grid-template-columns: repeat(2, 1fr);
+   padding-top:1rem;
+   margin-block-start: 0%;
+   height:5.5rem;
+   padding-right:0.5rem;
+}
+
+
+.ol-facts-container> li > span {
+   margin-left: -2rem;
+}
+
+.ol-facts-container> li > .ul-facts-numbers {
+    font-size: 150%;
+    font-weight: bold;
+}
+.ol-facts-container> li > .ul-facts-what {
+   font-size: 130%;
+   font-style: italic;
+}
+
+
+/* footer*/
+
+footer {
+   position:fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   font-size: 80%;
+}
+
+
+/* highligh Classes for toggling in jQuery*/
+
+.highlight-all {
+   background-color:rgb(0,0,21);
+   color: white;
+}
+
+.highlight-sec{
+  
+  
+   
+   background-color:rgb(0,0,21);
+   border-color: cyan;
+  
+   border-radius: 25px;
+
+   border-width:thin;
+   border-style: solid;
+   margin-bottom: 2rem  !important;;
+   padding:0.5rem  !important;;
+   margin-top: 10rem  !important;;
+  }
+
+  .highlight-container {
+   background-color:rgb(0,0,21);
+   border-radius: 25px;
+   /*box-shadow: 0 4px 8px 0 black; */
+   border-width: thin;
+   border-color: cyan;
+   border-style: solid;
+
+   height: 35rem  !important;;
+   margin-bottom: 2rem  !important;
+   margin-left:2rem  !important;;
+   margin-right:2rem  !important;;
+   padding:1.5rem  !important;;
+   
+  }
+
+
+  
+
+.highlight-a:hover{
+  
+   /* transform: scale(1.05); */
+   color:cyan;
+  }
+  
+  
+   nav > ul > .highlight-li:hover:not(#nav-icon) {
+     
+     color:cyan;
+     border-width:thin;
+     border-radius:25px;
+    
+     
+     border-style: solid;
+     
+  
+  
+   
+  }
+
+  .highlight-thtd {
+   background-color: rgb(10, 10, 31);
+}
+
+  /* PROGRAMMER PAGE AND RESEARCHER PAGE*/
+
+
+  #pr-languages-div-container {
+   height:80rem;
+}
+
+.pr-content-container:not(#pr-languages-div-container){
+   justify-content: center;
+}
+
+table {
+   margin:1rem;
+   padding:1rem;
+   justify-content: center;
+   table-layout: fixed ;
+   font-size: 130%;
+   margin-right:0;
+   width:100%;
+  
+
+}
+
+
+
+tr {
+   padding: 0.5rem;
+   height:6rem;
+   width:3rem;
+   
+}
+
+th, td {
+   padding: 1rem;
+   background-color:rgba(238, 238, 238, 1);
+   
+}
+td {
+   width:35%;
+}
+
+.pr-ol-content-container  {
+   display:grid;
+   grid-template-columns: repeat(3, 1fr);
+   justify-items: center;
+}
+.pr-ol-content-container > li {
+   width: 45%;
+   height: 8rem;
+   padding:3rem;
+   list-style-type: none;
+}
+
+
+.pr-languages {
+   width:20%;
+   height:105%;
+   justify-content: center;
+}
+
+.pr-languages > img {
+   height:100%; /* TODO: complete the vectorisation of the XML-TEI logo.  */
+   width:50%;
+
+}
+
+#java-img {
+   height: 100%;
+   width:35%;
+}
+
+#mysql-img {
+   height: 100%;
+   width:100%;
+}
+
+.bookTitle {
+   font-style: italic;
+}
+
+/* ABOUT ME PAGE*/
+
+#photoID{
+   margin-top: 4rem;
+   border-radius:50%;
+   box-shadow: 0 2px 4px 0 black;
+}
+
+.highlight-photoID
+ {
+   box-shadow: 0 2px 4px 0 cyan;
+ }
+.container-photo{
+   margin-bottom:8rem;
+} 
+
+.highlight-section:not(#findMe-container) {
+   border-color: cyan;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html id="all">
+    <head>
+        <link rel="stylesheet" href="styles_light.css" id="styles">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+     
+      </head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <body>
+    
+<nav class="nav-container">
+<ul class="nav-ul-container">
+  <li><a href="index.html">Home</a></li>
+    <li><a href="aboutMe.html">About me</a></li>
+    <li><a href="Researcher.html">Researcher</a></li>
+    <li><a href="Programmer.html">Programmer</a></li>
+ 
+    <li id="nav-icon"><button id="btn1"><img src="./images/black/half-moon.png" alt="moon" title="dark mode" id="toggleImg"/></button></li>
+                       
+     
+</ul>
+ </nav>
+
+<main>
+  <section class="main-container">
+    <h1>Marie-Astrid Hugel</h1>
+  <h2>Based in Frankfurt am Main, Deutschland</h2>
+  <div class="main">
+    <div class="content-container">
+     <div>
+      <h3>Biography</h3>
+      <p>I am a reseacher and programming enthousiast!</p>
+     </div>
+     
+     <div>
+      <h3>Currently Working With</h3>
+      <p>Software Engineer for the Project "The School of Salamanca" at the Max-Planck Institute für Rechtsgeschichte und Rechtstheorie</p>
+     </div>
+    
+    
+     <div>
+      <h3>What I do</h3>
+      <ul class="ul-specialities-container">
+        <li><img id="WA-img" src="./images/black/writing_article_icon.png"/>Scientific Writing</li>
+        <li><img id="TE-img" src="./images/black/teaching.png"/>Presentations</li>
+        <li><img id="AN-img" src="./images/black/analysis_icon.png"/>Analysis</li>
+        <li><img id="SL-img" src="./images/black/selflearning.png"/>Self-Learning</li>
+        <li><img id="Pro-img" src="./images/black/programming.png"/>Programming</li>
+      </ol>
+     </div>
+   </div>
+ 
+   <div class="content-container" id="factsAboutMe">
+      <h3>Some Facts about me</h3>
+    <h4>I have...</h4>
+     <ul class="ol-facts-container">
+      <li><span class="ul-facts-numbers">10</span> <span class="ul-facts-what">Articles</span></li>
+      <li><span class="ul-facts-numbers">30</span> <span class="ul-facts-what"> Presentations</span></li>
+      <li><span class="ul-facts-numbers">5</span> <span class="ul-facts-what">Portofolio Projects </span></li>
+      <li><span class="ul-facts-numbers">3</span> <span class="ul-facts-what">Courses currently followed</span></li>
+     </ol>
+     
+
+     
+      
+      
+     
+   </div>
+  </div>
+</section>
+  <section class="findMe-container">
+  
+
+    <!-- FIND ME SECTION -->
+  <div id="findMe" class="contact-container">
+    <h3>If you find me on these sites, it is indeed me!</h3>
+    <div class="grid-links-container">
+        <span id="academia"><img id="academia-img" src="./images/black/academia.png" title="academia.org"/></span>
+        <span id="linkedin"><img src="./linkedin.png" title="linkedin.com"/></span>
+        <span id="github"><img id="github-img"src="./images/black/github-mark.png" title="github.org"/></span>
+       
+        
+    </div>
+  </div>
+  <div id="contactMe" class ="contact-container">
+    <h3>Otherwise, you can contact me per Email</h3>
+
+  </div>
+</section>
+</main>
+  <footer>@Marie-Astrid Hugel, 2023, All Rights Reserved</footer>
+
+
+  <!-- JQUERY SCRIPT FOR TOGGLING BETWEEN LIGHT AND DAR MODE -->
+  <script>
+    $(document).ready(function() {
+
+   /* Start values: get the value stored inside localStorage, and adjust the mode in consequence */
+    let styleStore = window.localStorage.getItem('style');
+    var moon_active = "./images/black/half-moon.png";
+         var sun_active = "./images/white/sun.png";
+
+
+      if(styleStore==="light"){
+       $("#styles").attr("href", 'styles_light.css' );
+         window.localStorage.setItem('style', "light");
+         styleStore = window.localStorage.getItem('style');
+         $('#toggleImg').attr('src', moon_active);
+         $('#toggleImg').attr("title", "light mode");
+      
+      } else {
+        $("#styles").attr("href", 'styles_dark.css' );
+         window.localStorage.setItem('style', "dark");
+         styleStore = window.localStorage.getItem('style');
+         $('#toggleImg').attr("src", sun_active);
+         $('#toggleImg').attr("title", "dark mode");
+      }
+
+    $("#btn1").click( function() {
+      
+    
+       /* TODO:   add the FindMe and other icons */
+
+
+         /* Toggling, each time changing :
+         - the styles.css
+         - the image inside the button
+         - the title of the img 
+         -  the icons in the footer
+         - specific to index.html: the presentations icons. 
+          */
+      
+        if(styleStore === "light"){
+         $("#styles").attr("href", 'styles_dark.css');
+         window.localStorage.setItem('style', "dark");
+         styleStore = window.localStorage.getItem('style');
+         $('#toggleImg').attr("src", sun_active);
+         $('#toggleImg').attr("title", "dark mode");
+        }
+        else{
+          $("#styles").attr("href", 'styles_light.css' );
+         window.localStorage.setItem('style', "light");
+         styleStore = window.localStorage.getItem('style');
+        
+         $('#toggleImg').attr('src', moon_active);
+         $('#toggleImg').attr("title", "light mode");
+     
+        };
+      
+         
+
+
+          /* Logo of the FindMe section */
+          $("img#academia-img").attr("src") === "./images/black/academia.png" ? $("img#academia-img").attr("src", "./images/white/academia.png") : $("img#academia-img").attr("src", "./images/black/academia.png");
+          $("img#github-img").attr("src") === "./images/black/github-mark.png" ? $("img#github-img").attr("src", "./images/white/github-mark-white.png") : $("img#github-img").attr("src", "./images/black/github-mark.png");
+ 
+
+          /* Specific to index.html */
+          $("img#WA-img").attr("src") === "./images/black/writing_article_icon.png" ? $("img#WA-img").attr("src", "./images/white/writing.png") : $("img#WA-img").attr("src", "./images/black/writing_article_icon.png");
+          $("img#TE-img").attr("src") === "./images/black/teaching.png" ? $("img#TE-img").attr("src", "./images/white/presentation.png") : $("img#TE-img").attr("src", "./images/black/teaching.png");
+          $("img#AN-img").attr("src") === "./images/black/analysis_icon.png" ? $("img#AN-img").attr("src", "./images/white/analysis.png") : $("img#AN-img").attr("src", "./images/black/analysis_icon.png");
+          $("img#SL-img").attr("src") === "./images/black/selflearning.png" ? $("img#SL-img").attr("src", "./images/white/selflearning.png") : $("img#SL-img").attr("src", "./images/black/selflearning.png");
+          $("img#Pro-img").attr("src") === "./images/black/programming.png" ? $("img#Pro-img").attr("src", "./images/white/programming.png") : $("img#Pro-img").attr("src", "./images/black/programming.png");
+ 
+        });
+      });  
+
+</script>
+</body>
+
+ 
+</html>
