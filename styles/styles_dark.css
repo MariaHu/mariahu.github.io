@@ -196,6 +196,11 @@ h1 {
 
 }
 
+#academia-img {
+
+  filter: invert(1);
+}
+
 
 .ol-facts-container {
 display:grid;
@@ -238,72 +243,6 @@ footer {
 }
 
 
-/* highligh Classes for toggling in jQuery*/
-
-.highlight-all {
-   background-color:rgb(0,0,21);
-   color: white;
-}
-
-.highlight-sec{
-  
-  
-   
-   background-color:rgb(0,0,21);
-   border-color: cyan;
-  
-   border-radius: 25px;
-
-   border-width:thin;
-   border-style: solid;
-   margin-bottom: 2rem  !important;;
-   padding:0.5rem  !important;;
-   margin-top: 10rem  !important;;
-  }
-
-  .highlight-container {
-   background-color:rgb(0,0,21);
-   border-radius: 25px;
-   /*box-shadow: 0 4px 8px 0 black; */
-   border-width: thin;
-   border-color: cyan;
-   border-style: solid;
-
-   height: 35rem  !important;;
-   margin-bottom: 2rem  !important;
-   margin-left:2rem  !important;;
-   margin-right:2rem  !important;;
-   padding:1.5rem  !important;;
-   
-  }
-
-
-  
-
-.highlight-a:hover{
-  
-   /* transform: scale(1.05); */
-   color:cyan;
-  }
-  
-  
-   nav > ul > .highlight-li:hover:not(#nav-icon) {
-     
-     color:cyan;
-     border-width:thin;
-     border-radius:25px;
-    
-     
-     border-style: solid;
-     
-  
-  
-   
-  }
-
-  .highlight-thtd {
-   background-color: rgb(10, 10, 31);
-}
 
   /* PROGRAMMER PAGE AND RESEARCHER PAGE*/
 

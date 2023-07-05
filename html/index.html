@@ -76,7 +76,7 @@
     <h3>If you find me on these sites, it is indeed me!</h3>
     <div class="grid-links-container">
         <span id="academia"><img id="academia-img" src="../styles/images/black/academia.png" title="academia.org"/></span>
-        <span id="linkedin"><img id="linkedin-img" src="../styles/linkedin.png" title="linkedin.com"/></span>
+        <span id="linkedin"><img id="linkedin-img" src="../styles/linkedin.png" title="linkedin.com"/></span> <!--TODO: modify this image-->
         <span id="github"><img id="github-img"src="../styles/images/black/github-mark.png" title="github.org"/></span>
        
         
@@ -84,7 +84,7 @@
   </div>
   <div id="contactMe" class ="contact-container">
     <h3>Otherwise, you can contact me per Email</h3>
-    <iframe id="gmail-img" src="../styles/images/white/Gmail_icon.svg" title="Gmail" height="60" width="60"></iframe>
+    <iframe id="gmail-img" src="../styles/images/red-mail-icon.svg" title="Mail" height="60" width="60"></iframe>
   </div>
 </section>
 </main>
@@ -92,6 +92,7 @@
 
 
   <!-- JQUERY SCRIPT FOR TOGGLING BETWEEN LIGHT AND DARK MODE -->
+  <!-- relocate it in a separate js file to save lines ?-->
   <script>
     $(document).ready(function() {
 
@@ -100,7 +101,7 @@
     var moon_active = "../styles/images/black/half-moon.png";
     var sun_active = "../styles/images/white/sun.png";
  /* TODO: change icon for academia 
- change gmail icon for a simple letter icon, because I will use my professionnal address ! */
+  ! */
 
       if(styleStore==="light"){
        $("#styles").attr("href", '../styles/styles_light.css' );
@@ -112,7 +113,7 @@
          $("img#AN-img").attr("src", "../styles/images/black/analysis_icon.png");
          $("img#SL-img").attr("src", "../styles/images/black/selflearning.png");
          $("img#Pro-img").attr("src", "../styles/images/black/programming.png");
-         $("img#academia-img").attr("src", "../styles/images/black/academia.png");
+         $("img#academia-img").attr("src", "../styles/images/Academia-logo-2021.svg");
          $("img#github-img").attr("src", "../styles/images/black/github-mark.png");
          $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
         }
@@ -129,7 +130,7 @@
          $("img#AN-img").attr("src", "../styles/images/white/analysis.png");
          $("img#SL-img").attr("src", "../styles/images/white/selflearning.png");
          $("img#Pro-img").attr("src", "../styles/images/white/programming.png");
-         $("img#academia-img").attr("src", "../styles/images/white/academia.png");
+         $("img#academia-img").attr("src", "../styles/images/Academia-logo-2021.svg");
          $("img#github-img").attr("src", "../styles/images/white/github-mark-white.png");
          $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
       }
@@ -159,7 +160,7 @@
          $("img#AN-img").attr("src", "../styles/images/white/analysis.png");
          $("img#SL-img").attr("src", "../styles/images/white/selflearning.png");
          $("img#Pro-img").attr("src", "../styles/images/white/programming.png");
-         $("img#academia-img").attr("src", "../styles/images/white/academia.png");
+         $("img#academia-img").attr("src", "../styles/images/Academia-logo-2021.svg");
          $("img#github-img").attr("src", "../styles/images/white/github-mark-white.png");
          $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
     
@@ -178,7 +179,7 @@
          $("img#AN-img").attr("src", "../styles/images/black/analysis_icon.png");
          $("img#SL-img").attr("src", "../styles/images/black/selflearning.png");
          $("img#Pro-img").attr("src", "../styles/images/black/programming.png");
-         $("img#academia-img").attr("src", "../styles/images/black/academia.png");
+         $("img#academia-img").attr("src", "../styles/images/Academia-logo-2021.svg");
          $("img#github-img").attr("src", "../styles/images/black/github-mark.png");
          $("img#linkedin-img").attr("src", "../styles/images/white/LinkedIn_icon.svg.png");
          

@@ -37,48 +37,91 @@ a:hover{
  
 }
 
-.theme-switch-wrapper {  
-   display: flex;  
-   float: right;  
-   align-items: center;  
-   position: absolute;  
-   top: 0px;  right: 10px;  
- }.theme-switch {  
-   display: inline-block;  
-   height: 34px;  
-   position: relative;  
-   width: 60px;
- }
+/*nav bar */
+nav {
   
- .theme-switch input {  
-   display: none;
- } .slider {  
-   background-color: #ccc;  
-   bottom: 0;  
-   cursor: pointer;  
-   left: 0;  
-   position: absolute;  
-   right: 0;  
-   top: 0;  
-   transition: .4s;
- } .slider:before {  
-   background-color: #fff;  
-   bottom: 4px;  
-   content: "";  
-   height: 26px;  
-   left: 4px;  
-   position: absolute;  
-   transition: .4s;  
-   width: 26px;
- } input:checked + .slider {  
-   background-color: #28acea;
- } input:checked + .slider:before {  
-   transform: translateX(26px);
- }.slider.round {  
-   border-radius: 34px;
- } .slider.round:before {  
-   border-radius: 50%;
+   position:fixed;
+   width:100%;
+   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+   font-size: 2em;
+   padding: 0;
+   margin-top:-11rem; /* Sans cela, ma nav-bar accompagne la section ! */
+   
  }
+ 
+ nav >ul {
+    display:grid;
+    
+    grid-template-columns: repeat(6, 1fr);
+    box-sizing:content-box;
+    
+ }
+ 
+  nav > ul> li {
+    display:inline-block;
+    padding:1rem;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right:1rem;
+   
+    
+ }
+ 
+ #nav-icon {
+   
+    width:5.0%;  
+    position: absolute;
+    right:1rem;
+    top: 1rem;
+   
+ }
+ 
+ #nav-icon > button {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
+    border-radius: 25px;
+   
+ }
+ 
+ #nav-icon > button > img {
+    max-width:80%;
+    max-height: 80%;
+    
+ }
+
+@media only screen and (max-width:426px) {
+  a {
+      font-size: 1rem;
+      
+   }
+   nav >ul {
+      display:grid;
+      
+      grid-template-columns: repeat(5, 1fr);
+      box-sizing:border-box;
+      width: 60%;
+      
+      
+   }
+   
+    nav > ul> li {
+      display:inline-block;
+      padding:0.5rem;
+      justify-content: center;
+   
+} 
+
+#nav-icon {
+   
+   width:16.0%;  
+   position: absolute;
+   right:1rem;
+    
+   padding: 8% 0;
+  
+}
+
+}
+
 
 section:not(.findMe-container){
    border-radius: 25px;
@@ -90,56 +133,7 @@ section:not(.findMe-container){
    margin-top: 10rem;
 }
 
-/*nav bar */
-nav {
-  
-  position:fixed;
-  width:100%;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
-  font-size: 2em;
-  padding: 0;
-  margin-top:-11rem; /* Sans cela, ma nav-bar accompagne la section ! */
-  
-}
 
-nav >ul {
-   display:grid;
-   
-   grid-template-columns: repeat(6, 1fr);
-   box-sizing:content-box;
-   
-}
-
- nav > ul> li {
-   display:inline-block;
-   padding:1rem;
-   justify-content: center;
-   padding-left: 1rem;
-   padding-right:1rem;
-  
-   
-}
-
-#nav-icon {
-  
-   width:5.0%;  
-   position: absolute;
-   right:1rem;
-   top: 1rem;
-  
-}
-
-#nav-icon > button {
-   box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
-   border-radius: 25px;
-  
-}
-
-#nav-icon > button > img {
-   max-width:80%;
-   max-height: 80%;
-   
-}
 
 
 /* Title*/
@@ -209,6 +203,25 @@ h1 {
    height:60%;
    width:60%;
    
+}
+
+
+@media only screen and (max-width:426px) {
+
+   .main-container {
+      margin-bottom:-4rem;
+      width: 150%;
+   }
+
+   .main {
+   display: flex;
+   flex-direction: column;
+   padding-left:0;
+   padding-right: 0;
+   
+}
+
+
 }
 
 /* FindMe Section*/
